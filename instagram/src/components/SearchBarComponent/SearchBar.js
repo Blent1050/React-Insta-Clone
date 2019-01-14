@@ -13,9 +13,11 @@ import {
 export default class SearchBar extends Component {
   render() {
     return (
-      <div className='searchBar'>
-        <h1>SearchBar</h1>
-      </div>
+      <Navbar className='searchBar'>
+        <i className="fab fa-instagram"/>
+        <h1>Instagram</h1>
+
+      </Navbar>
     )
   }
 }

@@ -4,6 +4,7 @@ import posts from './dummy-data';
 import SearchBar from './components/SearchBarComponent/SearchBar';
 import PostContainer from './components/PostComponents/PostContainer';
 
+import {Container} from 'reactstrap';
 
 class App extends Component {
   constructor(props){
@@ -15,8 +16,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-       <SearchBar />
-       <PostContainer posts={this.state.posts} />
+      <Container>
+        <SearchBar />
+        <PostContainer posts={this.state.posts} />
+       </Container>
       </div>
     );
   }
