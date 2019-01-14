@@ -12,7 +12,7 @@ export default function PostContainer(props) {
             <h3>{post.username}</h3>
             <img src={post.imageUrl} alt={'Posted by ' + post.username} />
             <i className="far fa-heart"></i>
-            <i className="far fa-heart"></i>
+            <i className="far fa-comment"></i>
             <p>{post.likes}</p>
             <CommentSection post={post}/>
           </React.Fragment>

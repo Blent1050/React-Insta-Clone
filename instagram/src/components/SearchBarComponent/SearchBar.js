@@ -7,17 +7,23 @@ import {
   Nav,
   NavItem,
   NavLink,
-  Container
+  Container,
+  Form,
+  Input
 } from 'reactstrap';
 
 export default class SearchBar extends Component {
   render() {
     return (
-      <Navbar className='searchBar'>
+      <Container className='searchBar'>
         <i className="fab fa-instagram"/>
         <h1>Instagram</h1>
-
-      </Navbar>
+        <Form>
+          <Input type="text" placeholder="&#xF002; Search" />
+        </Form>
+        <i class="far fa-heart"></i>
+        <i class="far fa-user"></i>
+      </Container>
     )
   }
 }
