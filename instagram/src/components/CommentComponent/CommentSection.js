@@ -1,10 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 
-export default function CommentSection() {
+export default function CommentSection(props) {
   return (
     <div>
-      <h1>commentsection</h1>
+      {props.post.comments.map(comment => {
+        return(
+          <React.Fragment>
+            <p><strong>{comment.username}</strong> {comment.text}</p>
+          </React.Fragment>
+        )
+      })}
     </div>
   )
 }
