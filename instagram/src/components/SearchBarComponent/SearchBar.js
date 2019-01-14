@@ -1,15 +1,8 @@
 import React, { Component } from 'react'
 import './SearchBarStyling.css'
 import {
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
   Container,
   Form,
-  Input
 } from 'reactstrap';
 
 export default class SearchBar extends Component {
@@ -18,11 +11,13 @@ export default class SearchBar extends Component {
       <Container className='searchBar'>
         <i className="fab fa-instagram"/>
         <h1>Instagram</h1>
-        <Form>
-          <Input type="text" placeholder="&#xF002; Search" />
+        <Form className='search'>
+        <span class="fa fa-search"/>
+          <input placeholder="Search term"/>
         </Form>
-        <i class="far fa-heart"></i>
-        <i class="far fa-user"></i>
+        <i className="far fa-compass"></i>
+        <i className="far fa-heart"></i>
+        <i className="far fa-user"></i>
       </Container>
     )
   }

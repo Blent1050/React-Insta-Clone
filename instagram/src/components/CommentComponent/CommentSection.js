@@ -4,11 +4,9 @@ import PropTypes from 'prop-types';
 export default function CommentSection(props) {
   return (
     <div>
-      {props.post.comments.map(comment => {
+      {props.post.comments.map((comment, key) => {
         return(
-          <React.Fragment>
-            <p><strong>{comment.username}</strong> {comment.text}</p>
-          </React.Fragment>
+          <p key={key}><strong>{comment.username}</strong> {comment.text}</p>
         )
       })}
       <hr/>
