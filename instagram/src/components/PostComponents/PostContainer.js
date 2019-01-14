@@ -7,9 +7,11 @@ export default function PostContainer(props) {
     <React.Fragment>
       {props.posts.map((post, key) => {
         return(
-          <div key={key}>
-            <img src={post.thumbnailUrl} alt={'A picture of user ' + post.username} />
-            <h3>{post.username}</h3>
+          <div className='post' key={key}>
+            <div className='post-header'>
+              <img className='thumbnail' src={post.thumbnailUrl} alt={'A picture of user ' + post.username} />
+              <h3>{post.username}</h3>
+            </div>
             <img src={post.imageUrl} alt={'Posted by ' + post.username} />
             <i className="far fa-heart"></i>
             <i className="far fa-comment"></i>

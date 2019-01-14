@@ -3,6 +3,7 @@ body { margin: 30px; }
   position: relative;
   color: #aaa;
   font-size: 16px;
+  width: 50%;
 }
 
 .search input {
@@ -25,7 +26,9 @@ body { margin: 30px; }
     display: flex;
     justify-content: center;
     align-items: baseline;
+    margin: 5px;
 }
 .searchBar i{
-    
+    font-size: 28px;
+    margin: 0 5px;
 }
