@@ -12,7 +12,7 @@ export default class SearchBar extends Component {
         <i className="fab fa-instagram"/>
         <h1>Instagram</h1>
         <Form className='search'>
-        <span class="fa fa-search"/>
+        <span className="fa fa-search"/>
           <input placeholder="Search term"/>
         </Form>
         <i className="far fa-compass"></i>

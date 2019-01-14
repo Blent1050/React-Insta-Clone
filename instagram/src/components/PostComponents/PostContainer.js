@@ -3,10 +3,9 @@ import Proptypes from 'prop-types';
 import CommentSection from "../CommentComponent/CommentSection";
 
 export default function PostContainer(props) {
-  const { posts } = props;
   return (
     <React.Fragment>
-      {posts.map((post, key) => {
+      {props.posts.map((post, key) => {
         return(
           <div key={key}>
             <img src={post.thumbnailUrl} alt={'A picture of user ' + post.username} />
@@ -15,7 +14,7 @@ export default function PostContainer(props) {
             <i className="far fa-heart"></i>
             <i className="far fa-comment"></i>
             <p>{post.likes}</p>
-            <CommentSection post={post}/>
+            <CommentSection posts={post}/>
           </div>
         )
       })}
@@ -24,13 +23,13 @@ export default function PostContainer(props) {
 }
 //Type Checking
 PostContainer.propTypes = {
-  posts: Proptypes.shape({
+  posts: Proptypes.arrayOf(Proptypes.shape({
     username: Proptypes.string.isRequired,
     thumbnailUrl: Proptypes.string.isRequired,
-    imageurl: Proptypes.string.isRequired,
+    imageUrl: Proptypes.string.isRequired,
     likes: Proptypes.number.isRequired,
     comments: Proptypes.array
-  }).isRequired
+  })).isRequired
 }
 
 
