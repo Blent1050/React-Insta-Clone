@@ -1,13 +1,13 @@
 import React from 'react'
 import Proptypes from 'prop-types';
-
+import Comment from './Comment';
 export default function CommentSection(props) {
    console.log(props)
   return (
     <div>
       {props.posts.comments.map((comment, key) => {
         return(
-          <p key={key}><strong>{comment.username}</strong> {comment.text}</p>
+          <Comment key={key} username={comment.username} text={comment.text}/>
         )
       })}
       <hr/>
@@ -16,6 +16,7 @@ export default function CommentSection(props) {
   )
 }
 
+//Type checking
 CommentSection.propTypes = {
   posts: Proptypes.shape({
     username: Proptypes.string,
