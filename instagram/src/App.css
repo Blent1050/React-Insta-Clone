@@ -3,6 +3,7 @@
   width: 75%;
   max-width: 1024px;
   margin: 0 auto;
+  min-width: 676px;
 }
 
 i{

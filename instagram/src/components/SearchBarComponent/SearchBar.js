@@ -1,8 +1,5 @@
 import React, { Component } from 'react'
 import './SearchBarStyling.css'
-import {
-  Form,
-} from 'reactstrap';
 
 export default class SearchBar extends Component {
   render() {
@@ -10,7 +7,7 @@ export default class SearchBar extends Component {
       <div className='searchBar'>
         <div className='logo'>
           <i className="fab fa-instagram"/>
-          <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/640px-Instagram_logo.svg.png'></img>
+          <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/640px-Instagram_logo.svg.png' alt='Instagram logo'></img>
         </div>
         <div>
           <form className='search'>

@@ -10,9 +10,15 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      posts: posts
+      posts: []
     }
   }
+  componentDidMount(){
+    this.setState({
+      posts: posts
+    })
+  }
+
   render() {
     return (
       <div className="App">
