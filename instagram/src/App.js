@@ -10,19 +10,22 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      posts: []
+      posts: [],
+      searchInput: ""
     }
   }
   componentDidMount(){
     this.setState({
-      posts: posts
+      posts: posts,
     })
   }
 
   addLikes = timestamp => {
     const updatedLikes = this.state.posts.map(post => {
+      
       if(post.timestamp === timestamp){
         post.likes = post.likes + 1
+        
       }
       return post
     });
@@ -31,12 +34,18 @@ class App extends Component {
     })
   }
 
+  handleChange = event => {
+    this.setState({
+      [event.target.name]: event.target.value
+    })
+  }
+
   render() {
     return (
       <div className="App">
         <Container>
-          <SearchBar />
-          <PostContainer addLikes={this.addLikes} posts={this.state.posts} />
+          <SearchBar handleChanges={this.handleChanges} searchInput={this.state.searchInput} />
+          <PostContainer searchInput={this.state.searchInput} addLikes={this.addLikes} posts={this.state.posts} />
         </Container>
       </div>
     );
