@@ -25,16 +25,13 @@ class CommentSection extends React.Component {
       ],
       newComment: ""
     };
-    console.log(newCommentsArray);
     this.setState(newCommentsArray);
-    
   }
 
   handleChanges = event => {
     this.setState({
       [event.target.name]: event.target.value
     })
-    console.log(event.target.value)
   }
 
   render(){
@@ -48,7 +45,7 @@ class CommentSection extends React.Component {
         {/* <p className='timestamp'>{this.state.comments.timestamp}</p> */}
         <hr className='line'/>
         <form onSubmit={this.addNewComment}>
-          <input name='newComment' onChange={this.handleChanges} className='add-comment' placeholder='Add a comment...' type='text'></input>
+          <input value={this.state.newComment} name='newComment' onChange={this.handleChanges} className='add-comment' placeholder='Add a comment...' type='text'></input>
         </form>
         
       </div>
