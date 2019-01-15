@@ -8,15 +8,21 @@ export default class SearchBar extends Component {
   render() {
     return (
       <div className='searchBar'>
-        <i className="fab fa-instagram"/>
-        <h1>Instagram</h1>
-        <Form className='search'>
-        <span className="fa fa-search"/>
-          <input placeholder="Search term"/>
-        </Form>
-        <i className="far fa-compass"></i>
-        <i className="far fa-heart"></i>
-        <i className="far fa-user"></i>
+        <div>
+          <i className="fab fa-instagram"/>
+          <h1>Instagram</h1>
+        </div>
+        <div>
+          <form className='search'>
+          <span className="fa fa-search"/>
+            <input placeholder="Search term"/>
+          </form>
+        </div>
+        <div>
+          <i className="far fa-compass"></i>
+          <i className="far fa-heart"></i>
+          <i className="far fa-user"></i>
+        </div>
       </div>
     )
   }

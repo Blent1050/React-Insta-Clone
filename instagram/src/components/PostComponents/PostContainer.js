@@ -12,9 +12,12 @@ export default function PostContainer(props) {
               <img className='thumbnail' src={post.thumbnailUrl} alt={'A picture of user ' + post.username} />
               <h3>{post.username}</h3>
             </div>
-            <img src={post.imageUrl} alt={'Posted by ' + post.username} />
-            <i className="far fa-heart"></i>
-            <i className="far fa-comment"></i>
+            <img className='post-image' src={post.imageUrl} alt={'Posted by ' + post.username} />
+            <div className='post-icons'>
+              <i className="far fa-heart"></i>
+              <i className="far fa-comment"></i>
+            </div>
+
             <p>{post.likes}</p>
             <CommentSection posts={post}/>
           </div>

@@ -6,14 +6,20 @@
  
 }
 
+i{
+  font-size: 28px;
+  margin: 0 5px;
+}
 .post{
-width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .post-header{
   display: flex;
-  
-  align-items: baseline;
+  align-items: center;
   margin-left: 20px;
 }
 
@@ -21,4 +27,10 @@ width: 50%;
   border-radius: 50%;
   width: 35px;
   height: 35px;
+  margin-right: 15px;
+}
+
+.post-image{
+  width: 100%;
+  height: auto;
 }
