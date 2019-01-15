@@ -17,7 +17,18 @@ class App extends Component {
     this.setState({
       posts: posts
     })
-   
+  }
+
+  addLikes = timestamp => {
+    const updatedLikes = this.state.posts.map(post => {
+      if(post.timestamp === timestamp){
+        post.likes = post.likes + 1
+      }
+      return post
+    });
+    this.setState({
+      post: updatedLikes
+    })
   }
 
   render() {
@@ -25,7 +36,7 @@ class App extends Component {
       <div className="App">
         <Container>
           <SearchBar />
-          <PostContainer posts={this.state.posts} />
+          <PostContainer addLikes={this.addLikes} posts={this.state.posts} />
         </Container>
       </div>
     );

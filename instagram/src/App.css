@@ -68,3 +68,7 @@ i{
   font-size: 12px;
   color: gray;
 }
+
+.icon-interactable{
+  cursor: pointer;
+}

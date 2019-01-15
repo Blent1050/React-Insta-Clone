@@ -6,12 +6,7 @@ class PostContainer extends React.Component {
 
   constructor(props){
     super(props)
-    this.state = {
-      likes: props.likes
-    }
-    console.log(props.likes)
   }
-
 
   render(){
     return (
@@ -25,8 +20,8 @@ class PostContainer extends React.Component {
               </div>
               <img className='post-image' src={post.imageUrl} alt={'Posted by ' + post.username} />
               <div className='post-icons'>
-                <i className="far fa-heart"></i>
-                <i className="far fa-comment"></i>
+                <i onClick={() => this.props.addLikes(post.timestamp)} className="icon-interactable far fa-heart"></i>
+                <i className="icon-interactable far fa-comment"></i>
               </div>
               <p className='likes'><strong>{post.likes} likes</strong></p>
               <CommentSection posts={post}/>
