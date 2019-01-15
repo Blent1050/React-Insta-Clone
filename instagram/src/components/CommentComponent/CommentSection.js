@@ -45,7 +45,7 @@ class CommentSection extends React.Component {
         {/* <p className='timestamp'>{this.state.comments.timestamp}</p> */}
         <hr className='line'/>
         <form onSubmit={this.addNewComment}>
-          <input name='newComment' onChange={this.handleChanges} className='add-comment' placeholder='Add a comment...' type='text'></input>
+          <input name='newComment' value={this.state.newComment} onChange={this.handleChanges} className='add-comment' placeholder='Add a comment...' type='text'></input>
         </form>
         
       </div>
