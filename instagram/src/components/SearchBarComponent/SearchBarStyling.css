@@ -3,35 +3,43 @@
   position: relative;
   color: #aaa;
   font-size: 16px;
-  margin-bottom: 10px;
 }
 
 .search input {
-  width: 250px;
+  width: 200px;
   height: 32px;
   background: #fcfcfc;
   border: 1px solid #aaa;
   border-radius: 5px;
-  box-shadow: 0 0 3px #ccc, 0 10px 15px #ebebeb inset;
 }
 
-.search input { text-indent: 32px;}
+.search input { text-indent: 70px;
+}
 .search .fa-search { 
+  display: inline;
   position: relative;
-  top: 27px;
-  left: -105px;
+  left:65px;
 }
 
 .searchBar{
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
-    width: 50%;
-    margin: 0 auto;
+    width: 100%;
+    margin: 25px 0;
 }
 .searchBar div{
   display: flex;
   align-items: center;
-  margin: 0 20%;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+.searchBar img{
+  width: 120px;
+  
+}
+.logo img{
+  margin-left: 10px;
+  padding-left: 10px;
+  border-left: 1px solid rgba(128, 128, 128, 0.482);
 }

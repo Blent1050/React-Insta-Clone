@@ -8,9 +8,9 @@ export default class SearchBar extends Component {
   render() {
     return (
       <div className='searchBar'>
-        <div>
+        <div className='logo'>
           <i className="fab fa-instagram"/>
-          <h1>Instagram</h1>
+          <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/640px-Instagram_logo.svg.png'></img>
         </div>
         <div>
           <form className='search'>
