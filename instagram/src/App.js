@@ -14,17 +14,32 @@ class App extends Component {
       searchInput: ""
     }
   }
-  componentDidMount(){
-    this.setState({
-      posts: posts,
-    })
+  componentDidMount() {
+    if (localStorage.getItem("posts") === null) {
+      localStorage.setItem("posts", "[]");
+      return;
+    }
+    const appStorage = JSON.parse(localStorage.getItem("posts"));
+
+    return (
+      appStorage !== "" ?
+        this.setState({ posts: appStorage }) : this.setState({ posts: posts })
+    )
+  }
+
+  componentDidUpdate() {
+    let appStorage = localStorage.getItem("posts");
+    const dataString = JSON.stringify(this.state.posts);
+
+    return appStorage !== dataString
+      ? localStorage.setItem("posts", JSON.stringify(this.state.posts))
+      : null;
   }
 
   addLikes = timestamp => {
     const updatedLikes = this.state.posts.map(post => {
       if(post.timestamp === timestamp){
         post.likes = post.likes + 1
-        
       }
       return post
     });
