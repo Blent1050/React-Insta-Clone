@@ -19,7 +19,6 @@ export default function PostContainer(props) {
             </div>
             <p className='likes'><strong>{post.likes} likes</strong></p>
             <CommentSection posts={post}/>
-            
           </div>
         )
       })}

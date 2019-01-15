@@ -16,10 +16,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <Container>
-        <SearchBar />
-        <PostContainer posts={this.state.posts} />
-       </Container>
+        <Container>
+          <SearchBar />
+          <PostContainer posts={this.state.posts} />
+        </Container>
       </div>
     );
   }

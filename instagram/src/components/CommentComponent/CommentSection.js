@@ -1,8 +1,8 @@
 import React from 'react'
 import Proptypes from 'prop-types';
 import Comment from './Comment';
+
 export default function CommentSection(props) {
-   console.log(props)
   return (
     <div>
       {props.posts.comments.map((comment, key) => {
