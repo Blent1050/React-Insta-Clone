@@ -10,8 +10,8 @@ export default function CommentSection(props) {
           <Comment key={key} username={comment.username} text={comment.text}/>
         )
       })}
-      <hr/>
-      <input placeholder='Add a comment...' type='text'></input>
+      <hr className='line'/>
+      <input className='add-comment' placeholder='Add a comment...' type='text'></input>
     </div>
   )
 }

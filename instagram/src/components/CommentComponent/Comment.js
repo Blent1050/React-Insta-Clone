@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 export default function Comment(props)  {
     return (
-        <p>{props.username} {props.text}</p>
+        <p className='comment'><strong>{props.username}</strong> {props.text}</p>
     )
   }
 

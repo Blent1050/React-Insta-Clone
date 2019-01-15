@@ -17,8 +17,7 @@ export default function PostContainer(props) {
               <i className="far fa-heart"></i>
               <i className="far fa-comment"></i>
             </div>
-
-            <p>{post.likes}</p>
+            <p className='likes'><strong>{post.likes} likes</strong></p>
             <CommentSection posts={post}/>
           </div>
         )
