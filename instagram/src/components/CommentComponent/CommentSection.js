@@ -10,6 +10,7 @@ export default function CommentSection(props) {
           <Comment key={key} username={comment.username} text={comment.text}/>
         )
       })}
+      <p className='timestamp'>{props.posts.timestamp}</p>
       <hr className='line'/>
       <input className='add-comment' placeholder='Add a comment...' type='text'></input>
     </div>
