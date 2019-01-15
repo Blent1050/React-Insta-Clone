@@ -1,12 +1,6 @@
 import React from 'react'
 import './SearchBarStyling.css'
 
-const handleChange = event => {
-  this.setState({
-    [event.target.name]: event.target.value
-  })
-}
-
 export default function SearchBar(props) {
   return (
     <div className='searchBar'>
@@ -16,9 +10,14 @@ export default function SearchBar(props) {
       </div>
       <div>
         <form className='search'>
-        <span className="fa fa-search"/>
-          <input onChange={handleChange} value={props.searchInput} placeholder="Search term"/>
-        </form>
+          <span className="fa fa-search"/>
+            <input
+            type='text' 
+            name='searchInput' 
+            onChange={props.handleChange} 
+            value={props.searchInput} 
+            placeholder="Search term"/>
+          </form>
       </div>
       <div>
         <i className="far fa-compass"></i>

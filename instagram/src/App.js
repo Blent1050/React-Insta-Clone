@@ -22,7 +22,6 @@ class App extends Component {
 
   addLikes = timestamp => {
     const updatedLikes = this.state.posts.map(post => {
-      
       if(post.timestamp === timestamp){
         post.likes = post.likes + 1
         
@@ -44,7 +43,7 @@ class App extends Component {
     return (
       <div className="App">
         <Container>
-          <SearchBar handleChanges={this.handleChanges} searchInput={this.state.searchInput} />
+          <SearchBar handleChange={this.handleChange} searchInput={this.state.searchInput} />
           <PostContainer searchInput={this.state.searchInput} addLikes={this.addLikes} posts={this.state.posts} />
         </Container>
       </div>
