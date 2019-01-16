@@ -5,7 +5,6 @@ import Comment from './Comment';
 class CommentSection extends React.Component {
 
   constructor(props){
-    console.log(props);
     super(props);
     this.state = {
       comments: props.posts.comments,
