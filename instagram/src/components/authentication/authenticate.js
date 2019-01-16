@@ -1,20 +1,12 @@
 import React from 'react';
 
- const authenticate = WrappedComponent =>
-    class extends React.Component{
-        constructor(props){
-            super(props);
-            this.state = {
+ const authenticate = LoginPage => UserIsLoggedInPage => props => {
+     if(props.loggedIn){
+         return <UserIsLoggedInPage />
+     }
+     return <LoginPage />
+ }
 
-            }
-        }
-        render(){
-            return(
-                <div>
-                    <WrappedComponent />
-                </div>
-            )
-        }
-    }
+
 
 export default authenticate;

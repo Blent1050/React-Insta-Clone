@@ -53,7 +53,6 @@ class PostsPage extends React.Component {
         })
       }
       login = (e) => {
-          
           this.setState(prevState => ({
             loggedIn: !prevState.loggedIn
           }))
@@ -89,7 +88,8 @@ class PostsPage extends React.Component {
             </div>
         )
     }
-
 }
+
+
 
 export default PostsPage;
