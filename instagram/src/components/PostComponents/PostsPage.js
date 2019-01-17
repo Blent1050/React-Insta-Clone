@@ -8,33 +8,30 @@ class PostsPage extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            posts: [],
+            posts: posts,
             searchInput: "",
             loggedIn: false
           }
     }
-    componentDidMount() {
-        if (localStorage.getItem("posts") === null) {
-          localStorage.setItem("posts", "[]");
-          return;
-        }
-        const appStorage = JSON.parse(localStorage.getItem("posts"));
-    
-        return (
-          appStorage !== "" ?
-            this.setState({ posts: appStorage }) : this.setState({ posts: posts })
-        )
+    componentDidMount(){
+      const username = localStorage.getItem("username");
+      if(username){
+        this.setState({
+          loggedIn: true
+        })
+      }else{
+        this.setState({
+          loggedIn:false
+        })
       }
-    
-      componentDidUpdate() {
-        let appStorage = localStorage.getItem("posts");
-        const dataString = JSON.stringify(this.state.posts);
-    
-        return appStorage !== dataString
-          ? localStorage.setItem("posts", JSON.stringify(this.state.posts))
-          : null;
-      }
-    
+
+    }
+
+    componentDidUpdate(){
+
+    }
+
+
       addLikes = timestamp => {
         const updatedLikes = this.state.posts.map(post => {
           if(post.timestamp === timestamp){
@@ -53,6 +50,8 @@ class PostsPage extends React.Component {
         })
       }
       login = (e) => {
+          localStorage.setItem("username", `${this.state.usernameInput}`);
+          localStorage.setItem("loginStatus", JSON.stringify(this.state.loggedIn));
           this.setState(prevState => ({
             loggedIn: !prevState.loggedIn
           }))
@@ -79,17 +78,17 @@ class PostsPage extends React.Component {
           )
       }
     render(){
+
         return (
             <div>
             {
-                this.state.loggedIn ? this.displayAccount() : this.displayLoginPage()
+                authenticate(this.displayLoginPage)(this.displayAccount)(this.state.loggedIn)
             }
 
             </div>
         )
     }
+
 }
-
-
 
 export default PostsPage;

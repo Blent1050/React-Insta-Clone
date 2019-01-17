@@ -1,7 +1,8 @@
 import React from 'react';
 
- const authenticate = LoginPage => UserIsLoggedInPage => props => {
-     if(props.loggedIn){
+ const authenticate = LoginPage => UserIsLoggedInPage => loggedIn =>{
+     console.log(loggedIn);
+     if(loggedIn){
          return <UserIsLoggedInPage />
      }
      return <LoginPage />
